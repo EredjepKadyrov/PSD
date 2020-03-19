@@ -1,0 +1,76 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Statistic_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/controller.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:22:08 on Mar 19,2020
+# vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity controller
+# -- Compiling architecture acon of controller
+# End time: 18:22:08 on Mar 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.controller
+# vsim work.controller 
+# Start time: 18:22:18 on Mar 19,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.controller(acon)
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/controller/go \
+sim:/controller/clk \
+sim:/controller/rst \
+sim:/controller/zi \
+sim:/controller/en \
+sim:/controller/gt \
+sim:/controller/done \
+sim:/controller/s2 \
+sim:/controller/s3 \
+sim:/controller/state
+force -freeze sim:/controller/go 0 0
+force -freeze sim:/controller/go 0 0
+force -freeze sim:/controller/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/controller/rst 0 0
+force -freeze sim:/controller/zi 0 0
+force -freeze sim:/controller/gt 000 0
+run
+force -freeze sim:/controller/gt 1 0
+# Value length (1) does not equal array index length (3).
+# 
+# ** Error: (vsim-4011) Invalid force value: 1 0.
+# 
+force -freeze sim:/controller/gt 100 0
+run
+force -freeze sim:/controller/go 1 0
+run
+force -freeze sim:/controller/go 0 0
+run
+run
+run
+force -freeze sim:/controller/gt 110 0
+force -freeze sim:/controller/go 1 0
+run
+force -freeze sim:/controller/go 0 0
+run
+run
+run
+run
+# End time: 18:26:50 on Mar 19,2020, Elapsed time: 0:04:32
+# Errors: 2, Warnings: 0

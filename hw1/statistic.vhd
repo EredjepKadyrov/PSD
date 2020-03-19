@@ -1,0 +1,48 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity statistic is
+
+	generic(	n, k 	: integer := 4;
+				m 		: integer := 2);
+	port(	din 	: in std_logic_vector(n-1 downto 0);
+			dout 	: out std_logic_vector(n-1 downto 0);
+			dout_mode : in std_logic_vector(1 downto 0);
+			clk,rst,go : in std_logic := '0';
+			done: out std_logic := '0');
+
+end statistic;
+
+architecture stat of statistic is
+
+Signal zi, s2, s3 : std_logic;
+Signal gt : std_logic_vector(2 downto 0);
+Signal en : std_logic_vector(4 downto 0);
+
+component test_datapath is
+	generic(	n, k 	: integer := 4;
+				m 		: integer := 2);
+	port(	din 	: in std_logic_vector(n-1 downto 0);
+			dout 	: out std_logic_vector(n-1 downto 0);
+			dout_mode : in std_logic_vector(1 downto 0);
+			s2,s3,clk,rst : in std_logic;
+			zi : out std_logic := '0';
+			en : in std_logic_vector(4 downto 0);
+			gt : out std_logic_vector(2 downto 0) := "000");
+end component;
+
+component controller is
+	port(	go, clk, rst, zi: in std_logic;
+			en : out std_logic_vector(4 downto 0) := (others => '0');
+			gt : in std_logic_vector(2 downto 0);
+			done, s2, s3 : out std_logic := '0');
+end component;
+
+begin
+
+dpath	: test_datapath generic map(n, k, m) port map(din, dout, dout_mode, s2, s3, clk, rst, zi, en, gt);
+contr	: controller port map(go, clk, rst, zi, en, gt, done, s2, s3);
+
+end stat;

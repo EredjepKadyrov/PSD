@@ -1,0 +1,51 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Tugas/Semester_4/psd class/hw1/simulation/modelsim
+Econtroller
+Z1 w1584616716
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8E:/Tugas/Semester_4/psd class/hw1/controller.vhd
+Z6 FE:/Tugas/Semester_4/psd class/hw1/controller.vhd
+l0
+L5
+VnG0c==ZcgzkaWGkQ2>l:R0
+!s100 bRbBF[=NkZ3ATj>ki]]hE1
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1584616928
+!i10b 1
+Z9 !s108 1584616928.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|E:/Tugas/Semester_4/psd class/hw1/controller.vhd|
+Z11 !s107 E:/Tugas/Semester_4/psd class/hw1/controller.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aacon
+R2
+R3
+R4
+DEx4 work 10 controller 0 22 nG0c==ZcgzkaWGkQ2>l:R0
+l16
+L12
+V1?hji9RC:=SOJ;AO=h2W13
+!s100 IFC]>1=:hW25:0?Jz8zVV2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13

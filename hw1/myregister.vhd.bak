@@ -1,0 +1,9 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity myregister is
+	generic(n : integer := 4);
+	port(	en,clk,rst : in std_logic;
+			i	: in std_logic_vector(n-1 downto 0);
+			o	: out std_logic_vector(n-1 downto 0));
+end myregister;
