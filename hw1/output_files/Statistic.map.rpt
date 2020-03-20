@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Statistic
-Fri Mar 20 11:16:42 2020
+Fri Mar 20 15:28:08 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -60,13 +60,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 20 11:16:42 2020       ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar 20 15:28:08 2020       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Statistic                                   ;
 ; Top-level Entity Name           ; statistic                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 28                                          ;
+; Total registers                 ; 33                                          ;
 ; Total pins                      ; 14                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -205,25 +205,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 28        ;
+; Estimate of Logic utilization (ALMs needed) ; 33        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 41        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 14        ;
+; Combinational ALUT usage for logic          ; 48        ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 16        ;
 ;     -- 5 input functions                    ; 4         ;
-;     -- 4 input functions                    ; 7         ;
-;     -- <=3 input functions                  ; 16        ;
+;     -- 4 input functions                    ; 8         ;
+;     -- <=3 input functions                  ; 19        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 28        ;
+; Dedicated logic registers                   ; 33        ;
 ;                                             ;           ;
 ; I/O pins                                    ; 14        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 28        ;
-; Total fan-out                               ; 298       ;
-; Average fan-out                             ; 3.07      ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 31        ;
+; Total fan-out                               ; 345       ;
+; Average fan-out                             ; 3.17      ;
 +---------------------------------------------+-----------+
 
 
@@ -232,9 +232,9 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                    ; Entity Name   ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------+---------------+--------------+
-; |statistic                       ; 41 (0)              ; 28 (0)                    ; 0                 ; 0          ; 14   ; 0            ; |statistic                                                             ; statistic     ; work         ;
-;    |controller:contr|            ; 16 (16)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |statistic|controller:contr                                            ; controller    ; work         ;
-;    |test_datapath:dpath|         ; 25 (6)              ; 18 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath                                         ; test_datapath ; work         ;
+; |statistic                       ; 48 (0)              ; 33 (0)                    ; 0                 ; 0          ; 14   ; 0            ; |statistic                                                             ; statistic     ; work         ;
+;    |controller:contr|            ; 20 (20)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |statistic|controller:contr                                            ; controller    ; work         ;
+;    |test_datapath:dpath|         ; 28 (6)              ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath                                         ; test_datapath ; work         ;
 ;       |adder_bits_n:sumr|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath|adder_bits_n:sumr                       ; adder_bits_n  ; work         ;
 ;          |full_adder:\FA:1:FA_i| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath|adder_bits_n:sumr|full_adder:\FA:1:FA_i ; full_adder    ; work         ;
 ;          |full_adder:\FA:2:FA_i| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath|adder_bits_n:sumr|full_adder:\FA:2:FA_i ; full_adder    ; work         ;
@@ -246,20 +246,20 @@ refer to the applicable agreement for further details.
 ;       |myregister:reg2|          ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath|myregister:reg2                         ; myregister    ; work         ;
 ;       |myregister:reg3|          ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath|myregister:reg3                         ; myregister    ; work         ;
 ;       |myregister:reg4|          ; 3 (3)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath|myregister:reg4                         ; myregister    ; work         ;
+;       |up_counter:upc|           ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |statistic|test_datapath:dpath|up_counter:upc                          ; up_counter    ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; controller:contr|done                  ; Stuck at GND due to stuck port clock_enable ;
-; controller:contr|state[2,4..9,11..31]  ; Merged with controller:contr|state[10]      ;
-; controller:contr|state[10]             ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 30 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; controller:contr|state[2,4..9,11..31]  ; Merged with controller:contr|state[10] ;
+; controller:contr|state[10]             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 29 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -267,12 +267,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 28    ;
+; Total registers                              ; 33    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Clear ; 29    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Clock Enable       ; 23    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -400,18 +400,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                   ;
 +----------------+-------+--------------------------------------------------------+
-; n              ; 2     ; Signed Integer                                         ;
+; n              ; 3     ; Signed Integer                                         ;
 +----------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "test_datapath:dpath|up_counter:upc"                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "test_datapath:dpath|up_counter:upc" ;
++--------+-------+----------+------------------------------------+
+; Port   ; Type  ; Severity ; Details                            ;
++--------+-------+----------+------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                       ;
++--------+-------+----------+------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -461,23 +461,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 28                          ;
-;     CLR               ; 3                           ;
+; arriav_ff             ; 33                          ;
+;     CLR               ; 7                           ;
 ;     ENA               ; 1                           ;
-;     ENA CLR           ; 21                          ;
+;     ENA CLR           ; 22                          ;
 ;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 42                          ;
-;     normal            ; 42                          ;
-;         0 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 48                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 47                          ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 2                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 7                           ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 8                           ;
 ;         5 data inputs ; 4                           ;
-;         6 data inputs ; 14                          ;
+;         6 data inputs ; 16                          ;
 ; boundary_port         ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.37                        ;
+; Average LUT depth     ; 2.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -486,7 +488,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -496,7 +498,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Mar 20 11:16:17 2020
+    Info: Processing started: Fri Mar 20 15:27:36 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Statistic -c Statistic
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -540,19 +542,17 @@ Info (12128): Elaborating entity "full_adder" for hierarchy "test_datapath:dpath
 Info (12128): Elaborating entity "myregister" for hierarchy "test_datapath:dpath|myregister:reg4" File: E:/Tugas/Semester_4/psd class/hw1/test_datapath.vhd Line: 78
 Info (12128): Elaborating entity "up_counter" for hierarchy "test_datapath:dpath|up_counter:upc" File: E:/Tugas/Semester_4/psd class/hw1/test_datapath.vhd Line: 79
 Info (12128): Elaborating entity "controller" for hierarchy "controller:contr" File: E:/Tugas/Semester_4/psd class/hw1/statistic.vhd Line: 47
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "done" is stuck at GND File: E:/Tugas/Semester_4/psd class/hw1/statistic.vhd Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 50 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4879 megabytes
-    Info: Processing ended: Fri Mar 20 11:16:42 2020
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:56
+    Info (21061): Implemented 58 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Fri Mar 20 15:28:08 2020
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:53
 
 

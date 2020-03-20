@@ -58,18 +58,17 @@ clk => myregister:reg1.clk
 clk => myregister:reg2.clk
 clk => myregister:reg3.clk
 clk => myregister:reg4.clk
-clk => up_counter:upc.clk
 rst => myregister:reg1.rst
 rst => myregister:reg2.rst
 rst => myregister:reg3.rst
 rst => myregister:reg4.rst
 rst => up_counter:upc.reset
-zi <= <GND>
+zi <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 en[0] => myregister:reg1.en
 en[1] => myregister:reg2.en
 en[2] => myregister:reg3.en
 en[3] => myregister:reg4.en
-en[4] => up_counter:upc.enable
+en[4] => up_counter:upc.clk
 gt[0] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 gt[1] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 gt[2] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
@@ -359,12 +358,16 @@ o[5] <= o[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |statistic|test_datapath:dpath|up_counter:upc
 cout[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
 cout[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+cout[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+enable => count[2].ENA
 enable => count[1].ENA
 enable => count[0].ENA
 clk => count[0].CLK
 clk => count[1].CLK
+clk => count[2].CLK
 reset => count[0].ACLR
 reset => count[1].ACLR
+reset => count[2].ACLR
 
 
 |statistic|controller:contr

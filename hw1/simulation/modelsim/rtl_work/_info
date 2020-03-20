@@ -23,9 +23,9 @@ Vd@GT1kgZ]Q3dABf=nNmj?1
 !s100 82E:hKQXl:g5m:WSDgL]90
 Z8 OV;C;10.5b;63
 31
-Z9 !s110 1584677967
+Z9 !s110 1584695385
 !i10b 1
-Z10 !s108 1584677967.000000
+Z10 !s108 1584695385.000000
 Z11 !s90 -reportprogress|300|-93|-work|work|E:/Tugas/Semester_4/psd class/hw1/adder_bits_n.vhd|
 Z12 !s107 E:/Tugas/Semester_4/psd class/hw1/adder_bits_n.vhd|
 !i113 1
@@ -146,9 +146,9 @@ VIBz1<_n`9ML`l;cGO^U?O0
 !s100 _c>0haYEk@=LoDoz9XKcX1
 R8
 31
-Z29 !s110 1584677966
+Z29 !s110 1584695384
 !i10b 1
-Z30 !s108 1584677966.000000
+Z30 !s108 1584695384.000000
 Z31 !s90 -reportprogress|300|-93|-work|work|E:/Tugas/Semester_4/psd class/hw1/muxsel.vhd|
 Z32 !s107 E:/Tugas/Semester_4/psd class/hw1/muxsel.vhd|
 !i113 1
@@ -248,9 +248,9 @@ VRbKZ8WN5a4b:LZ54RjaK=3
 !s100 6`6?bmeC7lk[?Gg;mfYgS2
 R8
 31
-Z42 !s110 1584677968
+Z42 !s110 1584695386
 !i10b 1
-Z43 !s108 1584677968.000000
+Z43 !s108 1584695386.000000
 Z44 !s90 -reportprogress|300|-93|-work|work|E:/Tugas/Semester_4/psd class/hw1/statistic.vhd|
 Z45 !s107 E:/Tugas/Semester_4/psd class/hw1/statistic.vhd|
 !i113 1
@@ -277,7 +277,7 @@ R45
 R13
 R14
 Etest_datapath
-Z46 w1584677774
+Z46 w1584692849
 R16
 R4
 R5
@@ -292,7 +292,7 @@ R8
 31
 R9
 !i10b 1
-R30
+R10
 Z49 !s90 -reportprogress|300|-93|-work|work|E:/Tugas/Semester_4/psd class/hw1/test_datapath.vhd|
 Z50 !s107 E:/Tugas/Semester_4/psd class/hw1/test_datapath.vhd|
 !i113 1
@@ -306,20 +306,20 @@ R5
 DEx4 work 13 test_datapath 0 22 9A`i6PTG0CL5>CDMdRhU]0
 l65
 L27
-VGk433BF>>XPfLL:S2`BK02
-!s100 5gnDmO]=cmf][9FOX`<7b3
+VY:dW@AV^6<n=^_=f[f_0N1
+!s100 K94<D>J`DKl^zGOHYP_3<2
 R8
 31
 R9
 !i10b 1
-R30
+R10
 R49
 R50
 !i113 1
 R13
 R14
 Eup_counter
-Z51 w1583311909
+Z51 w1584684985
 R3
 R2
 R4
@@ -349,8 +349,8 @@ R5
 DEx4 work 10 up_counter 0 22 ?IMlCF^mSncogGUjI4dLZ2
 l17
 L15
-VVUYDYol;A^]WG]PIf`:e70
-!s100 MdWH`S3zICGj7AJIk1QoD3
+VYAiWg>2E`5360BCW_9kVg1
+!s100 OO7`_Pz9_?zBcHVV52?dW2
 R8
 31
 R9

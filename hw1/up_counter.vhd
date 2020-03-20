@@ -13,7 +13,7 @@ entity up_counter is
 end entity;
 
 architecture rtl of up_counter is
-    signal count :std_logic_vector (n-1 downto 0);
+    signal count :std_logic_vector (n-1 downto 0) := (others => '0');
 begin
     process (clk, reset) begin
         if (reset = '1') then

@@ -20,6 +20,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "done",
+					"strict" : false
+				},
+				{
 					"name" : "dout_mode[0]",
 					"strict" : false
 				},

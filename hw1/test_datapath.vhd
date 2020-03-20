@@ -60,7 +60,7 @@ architecture behv of test_datapath is
 	signal out_Reg : std_logic_vector(n+m-1 downto 0);
 	signal dinm : std_logic_vector(n+m-1 downto 0);
 	signal mwire: std_logic_vector(m-1 downto 0);
-	signal i : std_logic_vector(m-1 downto 0);
+	signal i : std_logic_vector(m downto 0);
 	
 begin
 
@@ -76,7 +76,7 @@ begin
 	reg3 : myregister port map(en=> en(2), clk => clk, rst=>rst, i=> no_2mux, o=>no_3);
 	sumr  : adder_bits_n generic map(n=>(n+m)) port map(cin=>'0', cout=>cout, a=>out_Reg, b=>dinm, s=>sum);
 	reg4 : myregister generic map(n => (n+m)) port map(en=> en(3), clk=>clk, rst=>rst, i=>sum, o=>out_Reg);
-	upc  : up_counter generic map(n => m) port map(i,en(4),clk,rst);
+	upc  : up_counter generic map(n => m+1) port map(i,'1',en(4),rst);
 	
 	
 	process(din, no_1, no_2, no_3, i)
@@ -90,10 +90,10 @@ begin
 			if din > no_3 then gt(2) <= '1';
 			else gt(2) <= '0';
 			end if;
-			if to_integer(unsigned(i)) = (k) then zi <= '1';
-			else zi <= '0';
-			end if;
 			
+			if (to_integer(unsigned(i)) = (k-1)) then zi <= '1';
+				else zi <= '0';
+			end if;
 	end process;
 	
 end behv;
