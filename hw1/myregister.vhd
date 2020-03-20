@@ -6,7 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity myregister is
 	generic(N : integer := 4);
 	port( en : in STD_LOGIC; i : in STD_LOGIC_VECTOR(N-1  downto 0);
-			clk : in STD_LOGIC; rst : in STD_LOGIC; o :out STD_LOGIC_VECTOR(N-1  downto 0));
+			clk : in STD_LOGIC; rst : in STD_LOGIC; o :out STD_LOGIC_VECTOR(N-1  downto 0):= (others => '0'));
 end myregister;
 
 architecture reg of myregister is

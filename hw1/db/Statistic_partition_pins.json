@@ -4,35 +4,39 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "en[0]",
+					"name" : "dout[0]",
 					"strict" : false
 				},
 				{
-					"name" : "en[1]",
+					"name" : "dout[1]",
 					"strict" : false
 				},
 				{
-					"name" : "en[2]",
+					"name" : "dout[2]",
 					"strict" : false
 				},
 				{
-					"name" : "en[3]",
+					"name" : "dout[3]",
 					"strict" : false
 				},
 				{
-					"name" : "en[4]",
+					"name" : "dout_mode[0]",
 					"strict" : false
 				},
 				{
-					"name" : "done",
+					"name" : "dout_mode[1]",
 					"strict" : false
 				},
 				{
-					"name" : "s2",
+					"name" : "din[1]",
 					"strict" : false
 				},
 				{
-					"name" : "s3",
+					"name" : "din[0]",
+					"strict" : false
+				},
+				{
+					"name" : "din[2]",
 					"strict" : false
 				},
 				{
@@ -44,23 +48,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "zi",
+					"name" : "din[3]",
 					"strict" : false
 				},
 				{
 					"name" : "go",
-					"strict" : false
-				},
-				{
-					"name" : "gt[2]",
-					"strict" : false
-				},
-				{
-					"name" : "gt[0]",
-					"strict" : false
-				},
-				{
-					"name" : "gt[1]",
 					"strict" : false
 				}
 			]

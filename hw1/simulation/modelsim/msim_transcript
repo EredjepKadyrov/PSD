@@ -10,9 +10,86 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/muxsel.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:19:26 on Mar 20,2020
+# vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/muxsel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity muxsel
+# -- Compiling architecture mux2sel of muxsel
+# -- Compiling architecture mux4sel of muxsel
+# -- Loading entity muxsel
+# End time: 11:19:26 on Mar 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/test_datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:19:26 on Mar 20,2020
+# vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/test_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity test_datapath
+# -- Compiling architecture behv of test_datapath
+# -- Loading entity muxsel
+# End time: 11:19:27 on Mar 20,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/myregister.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:19:27 on Mar 20,2020
+# vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/myregister.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity myregister
+# -- Compiling architecture reg of myregister
+# End time: 11:19:27 on Mar 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/adder_bits_n.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:19:27 on Mar 20,2020
+# vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/adder_bits_n.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity adder_bits_n
+# -- Compiling architecture behv of adder_bits_n
+# End time: 11:19:27 on Mar 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/full_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:19:27 on Mar 20,2020
+# vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/full_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity full_adder
+# -- Compiling architecture rtl of full_adder
+# End time: 11:19:27 on Mar 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/up_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:19:27 on Mar 20,2020
+# vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/up_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity up_counter
+# -- Compiling architecture rtl of up_counter
+# End time: 11:19:27 on Mar 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/controller.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:22:08 on Mar 19,2020
+# Start time: 11:19:27 on Mar 20,2020
 # vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/controller.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,57 +97,19 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity controller
 # -- Compiling architecture acon of controller
-# End time: 18:22:08 on Mar 19,2020, Elapsed time: 0:00:00
+# End time: 11:19:28 on Mar 20,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {E:/Tugas/Semester_4/psd class/hw1/statistic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:19:28 on Mar 20,2020
+# vcom -reportprogress 300 -93 -work work E:/Tugas/Semester_4/psd class/hw1/statistic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity statistic
+# -- Compiling architecture stat of statistic
+# End time: 11:19:28 on Mar 20,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.controller
-# vsim work.controller 
-# Start time: 18:22:18 on Mar 19,2020
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.controller(acon)
-view -new wave
-# -new not supported on PE
-add wave -position insertpoint  \
-sim:/controller/go \
-sim:/controller/clk \
-sim:/controller/rst \
-sim:/controller/zi \
-sim:/controller/en \
-sim:/controller/gt \
-sim:/controller/done \
-sim:/controller/s2 \
-sim:/controller/s3 \
-sim:/controller/state
-force -freeze sim:/controller/go 0 0
-force -freeze sim:/controller/go 0 0
-force -freeze sim:/controller/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/controller/rst 0 0
-force -freeze sim:/controller/zi 0 0
-force -freeze sim:/controller/gt 000 0
-run
-force -freeze sim:/controller/gt 1 0
-# Value length (1) does not equal array index length (3).
-# 
-# ** Error: (vsim-4011) Invalid force value: 1 0.
-# 
-force -freeze sim:/controller/gt 100 0
-run
-force -freeze sim:/controller/go 1 0
-run
-force -freeze sim:/controller/go 0 0
-run
-run
-run
-force -freeze sim:/controller/gt 110 0
-force -freeze sim:/controller/go 1 0
-run
-force -freeze sim:/controller/go 0 0
-run
-run
-run
-run
-# End time: 18:26:50 on Mar 19,2020, Elapsed time: 0:04:32
-# Errors: 2, Warnings: 0

@@ -1,5 +1,375 @@
-|controller
+|statistic
+din[0] => test_datapath:dpath.din[0]
+din[1] => test_datapath:dpath.din[1]
+din[2] => test_datapath:dpath.din[2]
+din[3] => test_datapath:dpath.din[3]
+dout[0] << test_datapath:dpath.dout[0]
+dout[1] << test_datapath:dpath.dout[1]
+dout[2] << test_datapath:dpath.dout[2]
+dout[3] << test_datapath:dpath.dout[3]
+dout_mode[0] => test_datapath:dpath.dout_mode[0]
+dout_mode[1] => test_datapath:dpath.dout_mode[1]
+clk => test_datapath:dpath.clk
+clk => controller:contr.clk
+go => controller:contr.go
+rst => test_datapath:dpath.rst
+rst => controller:contr.rst
+done << controller:contr.done
+
+
+|statistic|test_datapath:dpath
+din[0] => LessThan0.IN4
+din[0] => LessThan1.IN4
+din[0] => LessThan2.IN4
+din[0] => muxsel:mux2.I2[0]
+din[0] => muxsel:mux3.I2[0]
+din[0] => myregister:reg1.i[0]
+din[0] => adder_bits_n:sumr.b[0]
+din[1] => LessThan0.IN3
+din[1] => LessThan1.IN3
+din[1] => LessThan2.IN3
+din[1] => muxsel:mux2.I2[1]
+din[1] => muxsel:mux3.I2[1]
+din[1] => myregister:reg1.i[1]
+din[1] => adder_bits_n:sumr.b[1]
+din[2] => LessThan0.IN2
+din[2] => LessThan1.IN2
+din[2] => LessThan2.IN2
+din[2] => muxsel:mux2.I2[2]
+din[2] => muxsel:mux3.I2[2]
+din[2] => myregister:reg1.i[2]
+din[2] => adder_bits_n:sumr.b[2]
+din[3] => LessThan0.IN1
+din[3] => LessThan1.IN1
+din[3] => LessThan2.IN1
+din[3] => muxsel:mux2.I2[3]
+din[3] => muxsel:mux3.I2[3]
+din[3] => myregister:reg1.i[3]
+din[3] => adder_bits_n:sumr.b[3]
+dout[0] <= muxsel:mux1.O[0]
+dout[1] <= muxsel:mux1.O[1]
+dout[2] <= muxsel:mux1.O[2]
+dout[3] <= muxsel:mux1.O[3]
+dout_mode[0] => muxsel:mux1.S4[0]
+dout_mode[1] => muxsel:mux1.S4[1]
+s2 => muxsel:mux2.S2
+s3 => muxsel:mux3.S2
+clk => myregister:reg1.clk
+clk => myregister:reg2.clk
+clk => myregister:reg3.clk
+clk => myregister:reg4.clk
+clk => up_counter:upc.clk
+rst => myregister:reg1.rst
+rst => myregister:reg2.rst
+rst => myregister:reg3.rst
+rst => myregister:reg4.rst
+rst => up_counter:upc.reset
+zi <= <GND>
+en[0] => myregister:reg1.en
+en[1] => myregister:reg2.en
+en[2] => myregister:reg3.en
+en[3] => myregister:reg4.en
+en[4] => up_counter:upc.enable
+gt[0] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+gt[1] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+gt[2] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|muxsel:mux1
+I1[0] => Mux3.IN0
+I1[1] => Mux2.IN0
+I1[2] => Mux1.IN0
+I1[3] => Mux0.IN0
+I2[0] => Mux3.IN1
+I2[1] => Mux2.IN1
+I2[2] => Mux1.IN1
+I2[3] => Mux0.IN1
+I3[0] => Mux3.IN2
+I3[1] => Mux2.IN2
+I3[2] => Mux1.IN2
+I3[3] => Mux0.IN2
+I4[0] => Mux3.IN3
+I4[1] => Mux2.IN3
+I4[2] => Mux1.IN3
+I4[3] => Mux0.IN3
+S2 => ~NO_FANOUT~
+S4[0] => Mux0.IN5
+S4[0] => Mux1.IN5
+S4[0] => Mux2.IN5
+S4[0] => Mux3.IN5
+S4[1] => Mux0.IN4
+S4[1] => Mux1.IN4
+S4[1] => Mux2.IN4
+S4[1] => Mux3.IN4
+O[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|muxsel:mux2
+I1[0] => O[0].DATAB
+I1[1] => O[1].DATAB
+I1[2] => O[2].DATAB
+I1[3] => O[3].DATAB
+I2[0] => O[0].DATAA
+I2[1] => O[1].DATAA
+I2[2] => O[2].DATAA
+I2[3] => O[3].DATAA
+I3[0] => ~NO_FANOUT~
+I3[1] => ~NO_FANOUT~
+I3[2] => ~NO_FANOUT~
+I3[3] => ~NO_FANOUT~
+I4[0] => ~NO_FANOUT~
+I4[1] => ~NO_FANOUT~
+I4[2] => ~NO_FANOUT~
+I4[3] => ~NO_FANOUT~
+S2 => O[0].OUTPUTSELECT
+S2 => O[1].OUTPUTSELECT
+S2 => O[2].OUTPUTSELECT
+S2 => O[3].OUTPUTSELECT
+S4[0] => ~NO_FANOUT~
+S4[1] => ~NO_FANOUT~
+O[0] <= O[0].DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O[1].DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= O[2].DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= O[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|muxsel:mux3
+I1[0] => O[0].DATAB
+I1[1] => O[1].DATAB
+I1[2] => O[2].DATAB
+I1[3] => O[3].DATAB
+I2[0] => O[0].DATAA
+I2[1] => O[1].DATAA
+I2[2] => O[2].DATAA
+I2[3] => O[3].DATAA
+I3[0] => ~NO_FANOUT~
+I3[1] => ~NO_FANOUT~
+I3[2] => ~NO_FANOUT~
+I3[3] => ~NO_FANOUT~
+I4[0] => ~NO_FANOUT~
+I4[1] => ~NO_FANOUT~
+I4[2] => ~NO_FANOUT~
+I4[3] => ~NO_FANOUT~
+S2 => O[0].OUTPUTSELECT
+S2 => O[1].OUTPUTSELECT
+S2 => O[2].OUTPUTSELECT
+S2 => O[3].OUTPUTSELECT
+S4[0] => ~NO_FANOUT~
+S4[1] => ~NO_FANOUT~
+O[0] <= O[0].DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O[1].DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= O[2].DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= O[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|myregister:reg1
+en => o[3]~reg0.ENA
+en => o[2]~reg0.ENA
+en => o[1]~reg0.ENA
+en => o[0]~reg0.ENA
+i[0] => o[0]~reg0.DATAIN
+i[1] => o[1]~reg0.DATAIN
+i[2] => o[2]~reg0.DATAIN
+i[3] => o[3]~reg0.DATAIN
+clk => o[0]~reg0.CLK
+clk => o[1]~reg0.CLK
+clk => o[2]~reg0.CLK
+clk => o[3]~reg0.CLK
+rst => o[0]~reg0.ACLR
+rst => o[1]~reg0.ACLR
+rst => o[2]~reg0.ACLR
+rst => o[3]~reg0.ACLR
+o[0] <= o[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|myregister:reg2
+en => o[3]~reg0.ENA
+en => o[2]~reg0.ENA
+en => o[1]~reg0.ENA
+en => o[0]~reg0.ENA
+i[0] => o[0]~reg0.DATAIN
+i[1] => o[1]~reg0.DATAIN
+i[2] => o[2]~reg0.DATAIN
+i[3] => o[3]~reg0.DATAIN
+clk => o[0]~reg0.CLK
+clk => o[1]~reg0.CLK
+clk => o[2]~reg0.CLK
+clk => o[3]~reg0.CLK
+rst => o[0]~reg0.ACLR
+rst => o[1]~reg0.ACLR
+rst => o[2]~reg0.ACLR
+rst => o[3]~reg0.ACLR
+o[0] <= o[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|myregister:reg3
+en => o[3]~reg0.ENA
+en => o[2]~reg0.ENA
+en => o[1]~reg0.ENA
+en => o[0]~reg0.ENA
+i[0] => o[0]~reg0.DATAIN
+i[1] => o[1]~reg0.DATAIN
+i[2] => o[2]~reg0.DATAIN
+i[3] => o[3]~reg0.DATAIN
+clk => o[0]~reg0.CLK
+clk => o[1]~reg0.CLK
+clk => o[2]~reg0.CLK
+clk => o[3]~reg0.CLK
+rst => o[0]~reg0.ACLR
+rst => o[1]~reg0.ACLR
+rst => o[2]~reg0.ACLR
+rst => o[3]~reg0.ACLR
+o[0] <= o[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|adder_bits_n:sumr
+cin => full_adder:FA:0:FA_i.i_carry
+a[0] => full_adder:FA:0:FA_i.i_bit1
+a[1] => full_adder:FA:1:FA_i.i_bit1
+a[2] => full_adder:FA:2:FA_i.i_bit1
+a[3] => full_adder:FA:3:FA_i.i_bit1
+a[4] => full_adder:FA:4:FA_i.i_bit1
+a[5] => full_adder:FA:5:FA_i.i_bit1
+b[0] => full_adder:FA:0:FA_i.i_bit2
+b[1] => full_adder:FA:1:FA_i.i_bit2
+b[2] => full_adder:FA:2:FA_i.i_bit2
+b[3] => full_adder:FA:3:FA_i.i_bit2
+b[4] => full_adder:FA:4:FA_i.i_bit2
+b[5] => full_adder:FA:5:FA_i.i_bit2
+s[0] <= full_adder:FA:0:FA_i.o_sum
+s[1] <= full_adder:FA:1:FA_i.o_sum
+s[2] <= full_adder:FA:2:FA_i.o_sum
+s[3] <= full_adder:FA:3:FA_i.o_sum
+s[4] <= full_adder:FA:4:FA_i.o_sum
+s[5] <= full_adder:FA:5:FA_i.o_sum
+cout <= full_adder:FA:5:FA_i.o_carry
+
+
+|statistic|test_datapath:dpath|adder_bits_n:sumr|full_adder:\FA:0:FA_i
+i_carry => w_WIRE_3.IN1
+i_carry => o_sum.IN1
+i_bit1 => w_WIRE_1.IN0
+i_bit1 => w_WIRE_2.IN0
+i_bit2 => w_WIRE_1.IN1
+i_bit2 => w_WIRE_2.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+o_carry <= o_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|adder_bits_n:sumr|full_adder:\FA:1:FA_i
+i_carry => w_WIRE_3.IN1
+i_carry => o_sum.IN1
+i_bit1 => w_WIRE_1.IN0
+i_bit1 => w_WIRE_2.IN0
+i_bit2 => w_WIRE_1.IN1
+i_bit2 => w_WIRE_2.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+o_carry <= o_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|adder_bits_n:sumr|full_adder:\FA:2:FA_i
+i_carry => w_WIRE_3.IN1
+i_carry => o_sum.IN1
+i_bit1 => w_WIRE_1.IN0
+i_bit1 => w_WIRE_2.IN0
+i_bit2 => w_WIRE_1.IN1
+i_bit2 => w_WIRE_2.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+o_carry <= o_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|adder_bits_n:sumr|full_adder:\FA:3:FA_i
+i_carry => w_WIRE_3.IN1
+i_carry => o_sum.IN1
+i_bit1 => w_WIRE_1.IN0
+i_bit1 => w_WIRE_2.IN0
+i_bit2 => w_WIRE_1.IN1
+i_bit2 => w_WIRE_2.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+o_carry <= o_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|adder_bits_n:sumr|full_adder:\FA:4:FA_i
+i_carry => w_WIRE_3.IN1
+i_carry => o_sum.IN1
+i_bit1 => w_WIRE_1.IN0
+i_bit1 => w_WIRE_2.IN0
+i_bit2 => w_WIRE_1.IN1
+i_bit2 => w_WIRE_2.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+o_carry <= o_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|adder_bits_n:sumr|full_adder:\FA:5:FA_i
+i_carry => w_WIRE_3.IN1
+i_carry => o_sum.IN1
+i_bit1 => w_WIRE_1.IN0
+i_bit1 => w_WIRE_2.IN0
+i_bit2 => w_WIRE_1.IN1
+i_bit2 => w_WIRE_2.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+o_carry <= o_carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|myregister:reg4
+en => o[5]~reg0.ENA
+en => o[4]~reg0.ENA
+en => o[3]~reg0.ENA
+en => o[2]~reg0.ENA
+en => o[1]~reg0.ENA
+en => o[0]~reg0.ENA
+i[0] => o[0]~reg0.DATAIN
+i[1] => o[1]~reg0.DATAIN
+i[2] => o[2]~reg0.DATAIN
+i[3] => o[3]~reg0.DATAIN
+i[4] => o[4]~reg0.DATAIN
+i[5] => o[5]~reg0.DATAIN
+clk => o[0]~reg0.CLK
+clk => o[1]~reg0.CLK
+clk => o[2]~reg0.CLK
+clk => o[3]~reg0.CLK
+clk => o[4]~reg0.CLK
+clk => o[5]~reg0.CLK
+rst => o[0]~reg0.ACLR
+rst => o[1]~reg0.ACLR
+rst => o[2]~reg0.ACLR
+rst => o[3]~reg0.ACLR
+rst => o[4]~reg0.ACLR
+rst => o[5]~reg0.ACLR
+o[0] <= o[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|statistic|test_datapath:dpath|up_counter:upc
+cout[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+cout[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+enable => count[1].ENA
+enable => count[0].ENA
+clk => count[0].CLK
+clk => count[1].CLK
+reset => count[0].ACLR
+reset => count[1].ACLR
+
+
+|statistic|controller:contr
 go => process_0.IN1
+go => regrise.OUTPUTSELECT
 clk => state[0].CLK
 clk => state[1].CLK
 clk => state[2].CLK
@@ -32,6 +402,7 @@ clk => state[28].CLK
 clk => state[29].CLK
 clk => state[30].CLK
 clk => state[31].CLK
+clk => regrise.CLK
 clk => s3~reg0.CLK
 clk => s2~reg0.CLK
 clk => en[0]~reg0.CLK
@@ -49,6 +420,7 @@ rst => en[3]~reg0.ACLR
 rst => en[4]~reg0.ACLR
 rst => done~reg0.ACLR
 rst => state[0].ENA
+rst => regrise.ENA
 rst => state[31].ENA
 rst => state[30].ENA
 rst => state[29].ENA
@@ -80,6 +452,7 @@ rst => state[4].ENA
 rst => state[3].ENA
 rst => state[2].ENA
 rst => state[1].ENA
+zi => regrise.OUTPUTSELECT
 zi => state.OUTPUTSELECT
 zi => state.OUTPUTSELECT
 zi => state.OUTPUTSELECT
@@ -125,11 +498,6 @@ en[1] <= en[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 en[2] <= en[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 en[3] <= en[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 en[4] <= en[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-gt[0] => en.OUTPUTSELECT
-gt[0] => en.OUTPUTSELECT
-gt[0] => en.OUTPUTSELECT
-gt[0] => en.OUTPUTSELECT
-gt[0] => en.OUTPUTSELECT
 gt[0] => state.OUTPUTSELECT
 gt[0] => state.OUTPUTSELECT
 gt[0] => state.OUTPUTSELECT
@@ -164,11 +532,6 @@ gt[0] => state.OUTPUTSELECT
 gt[0] => state.OUTPUTSELECT
 gt[0] => s2.OUTPUTSELECT
 gt[0] => s3.OUTPUTSELECT
-gt[1] => en.OUTPUTSELECT
-gt[1] => en.OUTPUTSELECT
-gt[1] => en.OUTPUTSELECT
-gt[1] => en.OUTPUTSELECT
-gt[1] => en.OUTPUTSELECT
 gt[1] => state.OUTPUTSELECT
 gt[1] => state.OUTPUTSELECT
 gt[1] => state.OUTPUTSELECT
@@ -203,11 +566,6 @@ gt[1] => state.OUTPUTSELECT
 gt[1] => state.OUTPUTSELECT
 gt[1] => s2.OUTPUTSELECT
 gt[1] => s3.OUTPUTSELECT
-gt[2] => en.OUTPUTSELECT
-gt[2] => en.OUTPUTSELECT
-gt[2] => en.OUTPUTSELECT
-gt[2] => en.OUTPUTSELECT
-gt[2] => en.OUTPUTSELECT
 gt[2] => state.OUTPUTSELECT
 gt[2] => state.OUTPUTSELECT
 gt[2] => state.OUTPUTSELECT

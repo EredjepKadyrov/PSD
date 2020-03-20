@@ -12,6 +12,7 @@ end controller;
 architecture acon of controller is
 
 	signal state : integer := 0;
+	signal regrise : std_logic;
 
 begin
 	process(clk, rst)
@@ -22,21 +23,22 @@ begin
 				s2 <= '0';
 				s3 <= '0';
 		elsif rising_edge(clk) then
+			if(go = '0') then regrise <= '0';
+			end if;
 			if(zi = '1') then
 				done <= '1';
-			elsif(go = '1' and state = 0) then
+			elsif(go = '1' and state = 0 and regrise<='0') then
+				regrise <= '1';
+				en <= "00100";
 				if(gt(0) = '1') then	-- Highest
-					en <= "00100";
 					state <= 1;
 					s2 <= '0';
 					s3 <= '0';
 				elsif(gt(1) = '1') then -- Second
-					en <= "00100";
 					s3 <= '0';
 					s2 <= '1';
 					state <= 3;
 				elsif(gt(2) = '1') then -- Third
-					en <= "11100";
 					s3 <= '1';
 					s2 <= '0';
 					state <= 10;
@@ -45,14 +47,17 @@ begin
 				en <= "00010";
 				state <= 2;
 			elsif(state = 2) then
-				en <= "11001";
+				en <= "00001";
 				state <= 10;
 			elsif(state = 3) then
-				en <= "11010";
+				en <= "00010";
 				state <= 10;
-			else
+			elsif(state = 10) then
+				en <= "11000";
+				state <= 11;
+			elsif(state = 11) then
 				en <= "00000";
-				state <= 0;
+				state <=0;
 			end if;
 		end if;
 	end process;

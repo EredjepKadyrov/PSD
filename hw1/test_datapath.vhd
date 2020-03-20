@@ -90,7 +90,7 @@ begin
 			if din > no_3 then gt(2) <= '1';
 			else gt(2) <= '0';
 			end if;
-			if to_integer(unsigned(i)) = (k-1) then zi <= '1';
+			if to_integer(unsigned(i)) = (k) then zi <= '1';
 			else zi <= '0';
 			end if;
 			

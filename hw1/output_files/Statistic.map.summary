@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Mar 19 18:31:36 2020
+Analysis & Synthesis Status : Successful - Fri Mar 20 11:16:42 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Statistic
-Top-level Entity Name : controller
+Top-level Entity Name : statistic
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 10
-Total pins : 15
+Total registers : 28
+Total pins : 14
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

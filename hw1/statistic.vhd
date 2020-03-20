@@ -10,7 +10,8 @@ entity statistic is
 	port(	din 	: in std_logic_vector(n-1 downto 0);
 			dout 	: out std_logic_vector(n-1 downto 0);
 			dout_mode : in std_logic_vector(1 downto 0);
-			clk,rst,go : in std_logic := '0';
+			clk,go : in std_logic := '0';
+			rst : in std_logic := '1';
 			done: out std_logic := '0');
 
 end statistic;
