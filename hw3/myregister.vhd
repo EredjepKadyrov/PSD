@@ -1,3 +1,14 @@
+--
+--	Program VHDL Orisinil
+-- 	Alfian Badrul Isnan
+--	NPM : 1806148643
+--	Teknik Komputer Universitas Indonesia
+--	Selasa, 31 Maret 2020
+--
+--
+--	MyRegister.vhd
+--	
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
